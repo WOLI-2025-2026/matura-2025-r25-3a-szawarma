@@ -5,7 +5,7 @@
 
 using namespace std;
 
-string z3_1_path_symboe_txt = "../zalaczniki-2025/symbole.txt";
+string z3_1_path_symbole_txt = "../zalaczniki-2025/symbole.txt";
 
 bool czy_palindrom(string slowo)
 {
@@ -22,11 +22,13 @@ bool czy_palindrom(string slowo)
 
 void zadanie2_1()
 {
-    ifstream plik(z3_1_path_symboe_txt);
+    ifstream plik(z3_1_path_symbole_txt);
     if(!plik.is_open())
     {
         cerr << "nie mozna otworzyc pliku" << endl;
     }
+
+    ofstream wynik("wynik_2_1.txt");
 
     string linia;
     while(plik >> linia)
@@ -34,10 +36,11 @@ void zadanie2_1()
         if (czy_palindrom(linia))
         {
             cout << linia << endl;
+            wynik << linia << endl;
         }
     }
 
-
+    wynik.close();
     plik.close();
 
 }
