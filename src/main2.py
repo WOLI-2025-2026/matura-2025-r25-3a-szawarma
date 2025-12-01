@@ -28,7 +28,7 @@ def zad3_2():
                 x += A
                 y += B
                 P.append((x, y))
-            except: pass
+            except: ValueError
     licznik = 0
     for px, py in P:
         if 0 < px < 5000 and 0 < py < 5000:
