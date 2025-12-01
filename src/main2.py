@@ -13,7 +13,7 @@ def zad3_1():
             A, B = map(int, linia.split())
             if nwd(A,B) > 1:
                 licznik_par += 1
-
+                
     with open(plik_wyjscia, 'w') as z:
         z.write(f"3.1 {licznik_par}\n")
 
@@ -53,7 +53,7 @@ def zad3_2():
             if T: break
         if T: break
         
-    with open(plik_wyjscia, 'w') as z:
+    with open(plik_wyjscia, 'a') as z:
         z.write(f"3.2a {licznik}\n")
         
         if T:
