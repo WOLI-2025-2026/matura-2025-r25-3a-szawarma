@@ -6,7 +6,7 @@ plik_wyjscia="/workspaces/matura-2025-r25-3a-szawarma/src/wyniki3.txt"
 def nwd(a,b):
     return math.gcd(abs(a), abs(b))
 
-def zad3_1(plik_wejscia, plik_wyjscia):
+def zad3_1():
     licznik_par = 0
     with open(plik_wejscia, 'r') as wejscie:
         for linia in wejscie:
@@ -14,8 +14,8 @@ def zad3_1(plik_wejscia, plik_wyjscia):
             if nwd(A,B) > 1:
                 licznik_par += 1
 
-    with open(plik_wyjscia, 'w') as f:
-        f.write(f"3.1 {licznik_par}\n")
+    with open(plik_wyjscia, 'w') as z:
+        z.write(f"3.1 {licznik_par}\n")
 
 def zad3_2():
     P = [(0, 0)]
@@ -64,4 +64,5 @@ def zad3_2():
 
 
 if __name__ == "__main__":
+    zad3_1()
     zad3_2()
